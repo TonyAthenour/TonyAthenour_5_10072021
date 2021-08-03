@@ -14,13 +14,32 @@ async function showContent() {
   }
 }
 
-let div = document.createElement("div");
+const newElt = document.createElement("div");
+let docker = document.getElementById("article");
 
-document.getElementById("article").appendChild(div);
+docker.appendChild(newElt);
 
-div.innerHTML = "<p>BONJOUR<p>";
-div.classList.add("col-12");
-div.classList.add("col-sm-4");
-div.classList.add("my-3");
+let card = {
+  img: "url",
+  titre: "Ici Norbert",
+  texte: "Description",
+  prix: 2900,
+  disponible: true,
+};
+
+docker.children.innerHTML = "<p>BONJOUR<p>";
+
+
+docker.children.classList.add("ICI")
+docker.children.classList.add("col-12");
+docker.children.classList.add("col-sm-4");
+docker.children.classList.add("my-3");
+
+docker.children.appendChild(newElt);
+//card.classList.add("card");
+//card.classList.add("shadow");
+//card.innerHTML = "<p>CARD<p>";
+
+
 
 showContent();
