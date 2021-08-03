@@ -1,6 +1,6 @@
 
 export default async function retrieveContent() {
-    const url = "https://baconipsum.com/api/?type=all-meat&paras=2&start-with-lorem=1";
+    const url = "http://localhost:3000/api/furniture";
   
     const response = await fetch(url);
     return response.json();

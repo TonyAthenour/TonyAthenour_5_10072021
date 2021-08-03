@@ -3,11 +3,11 @@ import retrieveContent from './query.js';
 async function showContent() {
   try {
     const content = await retrieveContent();
+    console.log(content);
+    document.getElementById("card1-name").innerHTML = content[0].name;
+    document.getElementById("card1-text").innerHTML = content[0].description;
+    document.getElementById("card1-img").setAttribute("src", content[0].imageUrl);
 
-    let elt = document.createElement('div');
-    elt.innerHTML = content.join('<br />');
-
-    document.getElementsByTagName('body')[0].appendChild(elt);
   } catch (e) {
     console.log('Error', e);
   }
